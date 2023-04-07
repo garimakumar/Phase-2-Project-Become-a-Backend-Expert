@@ -13,7 +13,7 @@
 <body>
 <div align="center"><h1>FLYAWAY</h1></div>
 <div align="center"><h1>An Online Booking Portal</h1></div><br><br>
-<h1>Select Route:</h1>
+<h1>SELECT ROUTE:</h1>
 	<form action="showdetails.jsp" method="post">
 	<datalist id="source">
 		<%
@@ -33,8 +33,13 @@
 		}
 		%>
 	</datalist>
+	<table>
 	<p>
-		Source: <input type="text" name="source" list="source" required/>
+	<tr>
+		<td>Source:</td>
+		 
+		 <td><input type="text" name="source" list="source" required/></br></br></td>
+	</tr>
 	</p>
 		<datalist id="destination">
 		<%
@@ -59,26 +64,40 @@
 		%>
 	</datalist>
 	<p>
-		Destination: <input type="text" name ="destination" list="destination" required/>
+	<tr>
+		<td>Destination:</td>
+		<td><input type="text" name ="destination" list="destination" required/></br></br></td>
+    </tr>
     </p>	
     
     
-		<h2>ENTER YOUR DETAILS</h2>
+		<h2>Enter your details :</h2>
 		<%
 		int count = Integer.parseInt(request.getParameter("no of persons"));
 		for (int i = 1; i <= count; i++) {
 		%>		
-		Passenger Name <%=i %> : <input type="text" name="fullname" required> </br> </br>
-		 
-		Aadhar UID <%=i %> : <input type="number" name="uid" required></br> </br>
-		
-		Phone Number <%=i %> : <input type="number" name="phone" required> </br> </br> 
-		
-		Age <%=i %> : <input type="number" name="age" required></br></br>
+		<tr>
+		<td>Passenger Name <%=i %> :</td>
+		<td><input type="text" name="fullname" required> </br> </br></td>
+		</tr>
+		<tr>
+		<td>Aadhar UID <%=i %> :</td>
+		<td><input type="number" name="uid" required></br></br></td>
+		</tr>
+		<tr>
+		<td>Phone Number <%=i %> :</td>
+		<td><input type="number" name="phone" required></br></br></td> 
+		</tr>
+		<tr>
+		<td>Age <%=i %> :</td> 
+		<td><input type="number" name="age" required><br><br></td>
+		</tr>
 		-----------------------------------------------------------------------</br></br>
 		<%
 		}
 		%>
+		</table>
+		<br>
 		<input type="submit" value="Book Ticket"></br></br>
 	</form>
 	

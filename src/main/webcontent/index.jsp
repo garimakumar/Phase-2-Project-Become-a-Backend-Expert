@@ -16,24 +16,28 @@
 
 <div align="left"><h2>Admin Login</h2>
 <form action=AdminServlet method="post">
-Username :<input type="text" placeholder="Type Username" name="username"><br/><br/>
-Password :<input type="password" placeholder="Type Password" name="password"><br/><br/>
+<table>
+<tr>
+<td>Username</td>
+<td><input type="text" placeholder="Type Username" name="username"/></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" placeholder="Type Password" name="password"/></td>
+</tr>
+</table><br>
 <input type="submit" value="Submit">   <input type="reset" value="reset">
 </form>
 </div>
 
 <div align="left"><h2>For Users :</h2></div>
-<!-- <form action="traveldetails.jsp" method="post">
-Source          : <input type="text" placeholder="Type Source" name="Source" required="required"><br><br>
-Destination     : <input type="text" placeholder="Type Destination" name="Destination" required="required"><br><br>
-No of Passengers: <input type="number" placeholder="Type no. of Passengers" name="No of Passengers" required="required"><br><br>
-Date of Travel  : <input type="date" id="date" name="Select Date" placeholder="Enter date" required="required"><br><br>
-<input type="submit" value="Submit">  <input type="reset" value="reset">
-</form> -->
 
 <form action="search.jsp" method="post">
-		Travel Date <input type="date" id="traveldate" name="traveldate"
-			placeholder="dd/mm/yyyy" required> </br> </br>
+<table>
+<tr>
+		<td>Travel Date</td> 
+		<td><input type="date" id="traveldate" name="traveldate" placeholder="dd/mm/yyyy" required></td> 
+</tr>
 	<datalist id="source">
 		<%
 		Class.forName("com.mysql.cj.jdbc.Driver");
@@ -52,7 +56,10 @@ Date of Travel  : <input type="date" id="date" name="Select Date" placeholder="E
 		%>
 	</datalist>
 	<p>
-		Source   : <input type="text" name="source" list="source" required/>
+	<tr>
+		<td>Source</td>
+		<td><input type="text" name="source" list="source" required/></td>
+	</tr>
 	</p>
 	
 	<datalist id="destination">
@@ -75,13 +82,20 @@ Date of Travel  : <input type="date" id="date" name="Select Date" placeholder="E
 		%>
 	</datalist>
 	<p>
-		Destination: <input type="text" name ="destination" list="destination" required/>
+	<tr>
+		<td>Destination</td>
+		<td><input type="text" name ="destination" list="destination" required/></td>
+	</tr>
 	</p>
 	
-	No of Persons<input type="number" name="no of persons" required>
+	
+	<tr>
+	<td>No of Persons</td>
+	<td><input type="number" name="no of persons" required></td>
+	</tr>
+	</table>
 	</br>
-	</br>
-	<input type="submit" value="show available flights">
+	<input type="submit" value="Show available flights">
 	</br>
 	</br>
 	

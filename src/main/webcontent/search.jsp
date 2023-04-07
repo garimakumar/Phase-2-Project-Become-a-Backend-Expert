@@ -27,7 +27,7 @@ Connection con = DriverManager.getConnection(url, user, password);
 Statement st = con.createStatement();
 ResultSet rs = st.executeQuery(sql);
 %>
-<h2>Available Flights for your journey are:</h2>
+<h2>Available flights for your journey are:</h2>
 <table border="3">
 	<tr>
 			<th>Name</th>

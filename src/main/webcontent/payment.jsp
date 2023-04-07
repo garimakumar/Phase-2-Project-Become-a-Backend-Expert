@@ -11,15 +11,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<% 
+<%
 int count=Integer.parseInt(request.getParameter("no of persons"));
-out.println("<h1>"+"Payment of amount " + 5000*count + "/- is successful" +"</h1>");
-out.println("<h1>Your booking has been done successfully</h1>");
+out.println("<h2>"+"Payment of amount " + 5000*count + "/- is successful" +"</h2>");
+out.println("<h2>Your booking has been done successfully</h2>");
 out.println("<h2>Thanks! for showing interest with us..</h2>");
 RequestDispatcher rd = request.getRequestDispatcher("/showdetails.jsp");
 rd.include(request, response);
- 
 %>
 <style>
 body {

@@ -11,7 +11,7 @@
 <div align="center"><h1>An Online Booking Portal</h1></div>
 <h1>Welcome Admin!! GARIMA</h1>
 
-<div align="right" style="color: green;">
+<div align="right" style="color: blue;">
 <a href="changepassword.html">CHANGE PASSWORD</a><br><br><br>
 </div>
 
